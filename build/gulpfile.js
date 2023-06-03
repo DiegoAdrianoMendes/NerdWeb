@@ -72,6 +72,7 @@ function minifyCSS() {
 function moveJS() {
   return new Promise(function (resolve, reject) {
     src(`assets/js/${name}.js`).pipe(dest(`${outDir}/js`));
+    src(`./node_modules/swiper/swiper-bundle.min.js`).pipe(dest(`${outDir}/js`));
     resolve();
   });
 }
