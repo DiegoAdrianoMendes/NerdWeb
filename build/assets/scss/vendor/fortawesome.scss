@@ -1,0 +1,28 @@
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/functions";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/variables";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/mixins";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/core";
+
+.circle-user {
+  @include fa-icon-regular($fa-var-circle-user);
+}
+
+.cart-shopping {
+  @include fa-icon-solid($fa-var-cart-shopping);
+}
+
+.magnifying-glass {
+  @include fa-icon-solid($fa-var-magnifying-glass);
+}
+
+.chevron-left {
+  @include fa-icon-solid($fa-var-chevron-left);
+}
+
+.chevron-right {
+  @include fa-icon-solid($fa-var-chevron-right);
+}
+
+.fa-solid {
+  font-weight: 900;
+}
