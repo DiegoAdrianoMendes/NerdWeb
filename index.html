@@ -6,5 +6,448 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NerdWeb</title>
   </head>
-  <body></body>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="route-fork" viewBox="0 0 170 170">
+        <rect width="170" height="170" fill="none" />
+        <path
+          d="M50.554,66.247l-9.96,9.96A51.072,51.072,0,0,1,28.039,55.586l13.607-3.437A37.5,37.5,0,0,0,50.554,66.247Zm8.557-36.191L31.055,2,3,30.055H24.182a105.068,105.068,0,0,0,1.333,15.22l13.607-3.437a92.687,92.687,0,0,1-.912-11.783Zm70.138,0L101.194,2,73.138,30.055H94.11c-.7,25.811-8.978,33.316-17.815,41.241a60.821,60.821,0,0,0-10.17,10.871,50.026,50.026,0,0,0-7.926-8.7l-9.89,9.89c6.523,5.962,10.8,10.8,10.8,23.847h0v35.069H73.138V107.208h0c0-14.168,4.98-18.657,12.555-25.46,9.679-8.7,21.6-19.5,22.444-51.692Z"
+          fill="currentColor"
+        />
+      </symbol>
+      <symbol id="form-check" viewBox="0 0 171 171">
+        <path
+          d="M17.25,29.5H31.5v7.125a14.292,14.292,0,0,0,14.25,14.25H88.5a14.292,14.292,0,0,0,14.25-14.25V29.5H117V65.125h14.25V29.5A14.292,14.292,0,0,0,117,15.25H87.217a21.29,21.29,0,0,0-40.185,0H17.25A14.292,14.292,0,0,0,3,29.5v99.75A14.292,14.292,0,0,0,17.25,143.5H60V129.25H17.25ZM67.125,15.25A7.125,7.125,0,1,1,60,22.375,7.146,7.146,0,0,1,67.125,15.25Z"
+          fill="currentColor"
+        />
+        <path
+          d="M84.883,14.133a7.612,7.612,0,0,0-10.687,0L40.423,47.977l-16.1-16.031a7.612,7.612,0,0,0-10.687,0h0a7.612,7.612,0,0,0,0,10.688l21.731,21.66a7.1,7.1,0,0,0,10.046,0l39.4-39.472A7.547,7.547,0,0,0,84.883,14.133Z"
+          transform="translate(48.71 66.023)"
+          fill="currentColor"
+        />
+      </symbol>
+      <symbol id="headset">
+        <path
+          d="M115.889,93.379V121.8H101.778V93.379h14.111m-84.667,0V121.8H24.167a7.1,7.1,0,0,1-7.056-7.106V93.379H31.222M66.5,1C31.434,1,3,29.637,3,64.955V114.7a21.214,21.214,0,0,0,21.167,21.318H45.333V79.167H17.111V64.955a49.39,49.39,0,1,1,98.778,0V79.167H87.667v56.849h28.222v7.106H66.5v14.212h42.333A21.214,21.214,0,0,0,130,136.015V64.955C130,29.637,101.566,1,66.5,1Z"
+          fill="currentColor"
+        />
+      </symbol>
+    </svg>
+    <header>
+      <nav class="navbar">
+        <a href="#">
+          <img src="./assets/img/nerdweb.png" alt="NerdWeb" />
+        </a>
+        <ul>
+          <li><a href="#">Nerdweb</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Atendimento</a></li>
+        </ul>
+        <div>
+          <a href="#">DIA a DIA</a>
+          <ul>
+            <li><a href="#">Lorem</a></li>
+            <li><a href="#">Lorem</a></li>
+            <li><a href="#">Lorem</a></li>
+          </ul>
+        </div>
+        <i class="fa-regular fa-circle-user"></i>
+        <i class="fa-regular fa-cart-shopping"></i>
+      </nav>
+      <div class="subnavbar">
+        <nav>
+          <ul>
+            <li><a href="#">Sites</a></li>
+            <li><a href="#">Redes Sociais</a></li>
+            <li><a href="#">E-Commerce</a></li>
+            <li><a href="#">Mídia Online</a></li>
+            <li><a href="#">Landing Pages</a></li>
+          </ul>
+          <form action="">
+            <div>
+              <input type="search" placeholder="Digite sua pesquisa" />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </form>
+        </nav>
+      </div>
+      <div class="subnavbar__items">
+        <div>
+          <h2>
+            Soluções
+            <br />
+            Site
+          </h2>
+          <ul>
+            <li><a href="#">Briefing</a></li>
+            <li><a href="#">Pesquisa</a></li>
+            <li><a href="#">Criação</a></li>
+            <li><a href="#">Veiculação</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>
+            Soluções por
+            <br />
+            E-commerce
+          </h2>
+          <ul>
+            <li><a href="#">Lorem</a></li>
+            <li><a href="#">Ipsum</a></li>
+            <li><a href="#">Dolor</a></li>
+            <li><a href="#">Google ads</a></li>
+            <li><a href="#">Análise de mercado</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>
+            Soluções por
+            <br />
+            Redes Sociais
+          </h2>
+          <ul>
+            <li><a href="#">Briefing</a></li>
+            <li><a href="#">Pesquisa</a></li>
+            <li><a href="#">Criação</a></li>
+            <li><a href="#">Veiculação</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>
+            Soluções por
+            <br />
+            Landing Page
+          </h2>
+          <ul>
+            <li><a href="#">Conteúdo</a></li>
+            <li><a href="#">Relatórios</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="banner">
+      <img src="./assets/img/banner.png" alt="NerdWeb" />
+    </section>
+    <section class="">
+      <div>
+        <h2 class="text-">
+          Descubra os <br />
+          serviços Nerdweb <br />
+          <span class="text-">
+            que mais combinam <br />
+            com a sua empresa <br />
+          </span>
+        </h2>
+
+        <a href="#" class="btn">Ver Serviços</a>
+      </div>
+      <div class="division"></div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div>
+              <svg width="170" height="170" color="#005271">
+                <use xlink:href="#route-fork"></use>
+              </svg>
+              <h4>Título</h4>
+              <p>
+                Dolor sit ameti consetetur <br />
+                sadipscing elitr, sed
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <svg width="170" height="170" color="#005271">
+                <use xlink:href="#headset"></use>
+              </svg>
+              <h3>Serviço</h3>
+              <p>
+                Lorem ipsum dolor sit amet, <br />
+                consetetur sadipscing
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <svg width="170" height="170" color="#005271">
+                <use xlink:href="#form-check"></use>
+              </svg>
+              <h3>Exemplo</h3>
+              <p>
+                Ipsum dolor sit amet, <br />
+                consetetur sadi <br />
+                elitr.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev">
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="swiper-button-next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+    </section>
+    <section class="products">
+      <h2 class="text-">
+        Conheça todos
+        <span class="text-">produtos Nerdweb</span>
+      </h2>
+      <div class="products__carousel">
+        <div class="products_card">
+          <img src="./assets/img/laptop.png" alt="Sites" />
+          <span>Sites</span>
+        </div>
+        <div class="products_card">
+          <img src="./assets/img/phone.png" alt="E-Commerce" />
+          <span>E-Commerce</span>
+        </div>
+        <div class="products_card">
+          <img src="./assets/img/shop.png" alt="Redes" />
+          <span>Redes</span>
+        </div>
+        <div class="products_card">
+          <img src="./assets/img/laptop.png" alt="Sites" />
+          <span>Sites</span>
+        </div>
+        <div class="products_card">
+          <img src="./assets/img/phone.png" alt="E-Commerce" />
+          <span>E-Commerce</span>
+        </div>
+        <div class="products_card">
+          <img src="./assets/img/shop.png" alt="Redes" />
+          <span>Redes</span>
+        </div>
+        <div class="products_card">
+          <img src="./assets/img/laptop.png" alt="Sites" />
+          <span>Sites</span>
+        </div>
+        <div class="products_card">
+          <img src="./assets/img/phone.png" alt="E-Commerce" />
+          <span>E-Commerce</span>
+        </div>
+        <div class="products_card">
+          <img src="./assets/img/shop.png" alt="Redes" />
+          <span>Redes</span>
+        </div>
+        <div class="products_card">
+          <img src="./assets/img/laptop.png" alt="Sites" />
+          <span>Sites</span>
+        </div>
+        <div class="products_card">
+          <img src="./assets/img/phone.png" alt="E-Commerce" />
+          <span>E-Commerce</span>
+        </div>
+        <div class="products_card">
+          <img src="./assets/img/shop.png" alt="Redes" />
+          <span>Redes</span>
+        </div>
+      </div>
+      <a href="#" class="btn">Ver Todos os Produtos</a>
+    </section>
+    <section class="team">
+      <h2>Faça parte do nosso time de nerds</h2>
+      <p>
+        <strong>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed <br />
+          diam nonumy eirmod tempor invidunt ut labore et dolore <br />
+          magna aliquyam erat, sed diam voluptua. <br />
+        </strong>
+      </p>
+    </section>
+    <section class="services">
+      <h2>Seleção de Serviços</h2>
+      <span>Conheça nossa seleção especial</span>
+      <div>
+        <img
+          src="./assets/img/service.png"
+          alt="Serviço"
+          class="services__img"
+        />
+        <div>
+          <p>
+            Servi o de teste de front-end Lorem ipsum dolor sit a et, consetetur
+            <br />
+            sadipscing elitr, sed dia nonumy eirmod <br />
+            tempor invidunt ut labo e et dolore magna CONHECER
+          </p>
+          <a href="#">Conhecer</a>
+        </div>
+      </div>
+      <div>
+        <img
+          src="./assets/img/service-2.png"
+          alt="Serviço"
+          class="services__img"
+        />
+        <div>
+          <p>
+            Servi o de teste de front-end Lorem ipsum dolor sit a et, consetetur
+            <br />
+            sadipscing elitr, sed dia nonumy eirmod <br />
+            tempor invidunt ut labo e et dolore magna CONHECER
+          </p>
+          <a href="#">Conhecer</a>
+        </div>
+      </div>
+      <div>
+        <img
+          src="./assets/img/service-3.png"
+          alt="Serviço"
+          class="services__img"
+        />
+        <div>
+          <p>
+            Servi o de teste de front-end Lorem ipsum dolor sit a et, consetetur
+            <br />
+            sadipscing elitr, sed dia nonumy eirmod <br />
+            tempor invidunt ut labo e et dolore magna CONHECER
+          </p>
+          <a href="#">Conhecer</a>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="about__banner">
+        <h2>Conheça a visão Nerdweb e entenda nossa história</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed <br />
+          diam nonum eirmod tem or
+        </p>
+        <a href="#" class="btn">Ir para Sobre</a>
+      </div>
+
+      <div class="division"></div>
+      <div>
+        <p>
+          <strong>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            <br />
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+          </strong>
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy
+          <br />
+          eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+          diam
+          <br />
+          voluptua.
+          <strong>
+            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+            <br />
+            kasd gubergren ,
+          </strong>
+          no sea takimata sanctus est Lorem ipsum dolor sit amet <br />
+          Lorem ipsum dolor sit amet, consetetur
+          <strong>
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam
+          </strong>
+          volu tua. At vero eos et accusam et
+        </p>
+      </div>
+    </section>
+    <section class="newsletter">
+      <h2>
+        Novidades e <br />
+        descontos especiais
+      </h2>
+      <p>
+        Descubra com a gente uma vida <br />
+        nova, saudável, cheia de sabor e <br />
+        desconto!
+      </p>
+
+      <form action="">
+        <input
+          type="text"
+          placeholder="NOME"
+          pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s-']{2,25}"
+        />
+        <input
+          type="email"
+          placeholder="E-Mail"
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+        />
+        <button class="btn">Cadastrar</button>
+      </form>
+    </section>
+    <footer>
+      <div>
+        <div>
+          <img src="./assets/img/logo.png" alt="Logo NerdWeb" />
+        </div>
+        <div>
+          <h3>NerdWeb</h3>
+          <ul>
+            <li>
+              <a href="#">Sobre</a>
+            </li>
+            <li>
+              <a href="#">Nossos Princípios</a>
+            </li>
+            <li>
+              <a href="#">Funcionários</a>
+            </li>
+            <li>
+              <a href="#">Trabalhe Conosco</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Ajuda</h3>
+          <ul>
+            <li>
+              <a href="#">Prazos e Entregas</a>
+            </li>
+            <li>
+              <a href="#">Troca e Devoluções</a>
+            </li>
+            <li>
+              <a href="#">Políticas de Privacidade</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Atendimento</h3>
+          <ul>
+            <li>
+              <a href="#">Dúvidas Frequentes</a>
+            </li>
+            <li>
+              <a href="tel:+41333333">(41) 3333-3333</a>
+            </li>
+            <li>
+              <a href="malito:teste@nerdweb.com.br">teste@nerdweb.com.br</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Horário de Atendimento</h3>
+          <p>
+            De segunda a sexta-feira <br />
+            das 08hOO às 12hOO e <br />
+            das 13hOO às 17h40
+          </p>
+        </div>
+        <hr />
+        <p>2022 Nerdweb - Extreme Hosting, todos os direitos reservados.</p>
+        <div>
+          <p>Fique em sintonia com a gente</p>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
