@@ -1,0 +1,6 @@
+@each $class, $values in $font-sizes {
+  .#{$class} {
+    font-size: map-get($values, "font-size");
+    line-height: map-get($values, "line-height");
+  }
+}
