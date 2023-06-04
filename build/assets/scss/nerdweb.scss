@@ -1,8 +1,12 @@
 @charset "UTF-8";
+@use "sass:list";
 
 @import "abstract";
-@import "base";
-@import "components";
+
+@import "vendor/swiper.scss";
 @import "vendor/fortawesome.scss";
 @import "vendor/hamburgers.scss";
-@import "vendor/swiper.scss";
+
+@import "base";
+@import "components";
+@import "base/utilities";

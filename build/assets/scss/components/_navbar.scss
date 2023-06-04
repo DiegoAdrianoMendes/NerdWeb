@@ -1,0 +1,13 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: $white;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid #71d8ff;
+  padding: 0.75rem 0;
+}
+
+header + *{
+  margin-top: 51px;
+}

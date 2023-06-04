@@ -1,0 +1,25 @@
+.products {
+  margin-top: 3.75rem;
+
+  &__card {
+    background-color: rgb(243, 243, 243);
+    padding: 0.75rem 0.25rem;
+    height: 132px;
+    width: 122px;
+
+    span {
+      color: rgb(103, 103, 103);
+      text-transform: uppercase;
+      margin-top: 0.75rem;
+      @extend .text-sm;
+      font-weight: $font-medium;
+    }
+  }
+}
+
+#products-carousel {
+  .swiper-scrollbar {
+    width: calc(100% - 4.5rem);
+    margin-left: 2.25rem;
+  }
+}

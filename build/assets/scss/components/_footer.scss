@@ -1,0 +1,43 @@
+.footer {
+  background-color: rgb(40, 49, 55);
+  border-top: 5px solid #0089bc;
+
+  &__img{
+    margin-top: 1.5rem;
+    max-width: 64px;
+  }
+
+  ul {
+    margin-bottom: 2rem;
+  }
+
+  .time{
+    color: rgb(178, 234, 255);
+  }
+
+  hr {
+    margin: 2rem 0;
+    border: 1px solid rgb(225, 225, 225);
+  }
+
+  &__social {
+    background-color: $black;
+    color: rgb(178, 234, 255);
+    padding: 0.875rem;
+
+    h4 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__icons {
+    font-size: 1.5rem;
+  }
+
+  &__copy{
+    color: #E1E1E1;
+    margin: 2rem 0;
+    order: 1;
+  }
+}

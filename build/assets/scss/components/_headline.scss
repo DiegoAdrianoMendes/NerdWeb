@@ -1,0 +1,8 @@
+.headline {
+  max-width: 240px;
+  @extend .text-base;
+  font-weight: $font-extrabold;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}

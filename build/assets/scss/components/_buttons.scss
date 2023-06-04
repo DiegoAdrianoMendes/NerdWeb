@@ -1,0 +1,13 @@
+.btn{
+  @extend .text-xs;
+  padding: 0.5rem 2.5rem;
+  text-transform: uppercase;
+  font-weight: $font-extrabold;
+  outline: none;
+  border: none;
+}
+
+.btn--primary{
+  background-color: #71d8ff;
+  color: $secondary;
+}

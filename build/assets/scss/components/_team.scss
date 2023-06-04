@@ -1,0 +1,15 @@
+.team {
+  margin-top: 4rem;
+  background-size: cover;
+
+  &__wrapper {
+    padding: 2rem;
+    background-image: url("../img/time-mobile.png");
+    background-size: cover;
+    border-bottom: 3px solid $primary;
+
+    p {
+      color: rgb(0, 82, 113);
+    }
+  }
+}

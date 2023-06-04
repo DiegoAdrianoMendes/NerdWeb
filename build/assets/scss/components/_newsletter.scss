@@ -1,0 +1,34 @@
+.newsletter {
+  margin-bottom: 4rem;
+  
+  &__wrapper {
+    background-color: rgb(243, 243, 243);
+    padding: 2.5rem 1.25rem;
+  }
+
+  p {
+    color: rgb(0, 138, 189);
+  }
+
+  form {
+    gap: 10px;
+    input {
+      color: rgb(0, 82, 113);
+      border: solid 1px rgb(0, 82, 113);
+      outline: none;
+      background-color: transparent;
+      padding: 0.875rem 1.5rem;
+      width: 100%;
+      @extend .text-xs;
+
+      &::placeholder {
+        color: rgb(0, 82, 113);
+        opacity: 1;
+      }
+    }
+
+    button {
+      margin-top: 2rem;
+    }
+  }
+}

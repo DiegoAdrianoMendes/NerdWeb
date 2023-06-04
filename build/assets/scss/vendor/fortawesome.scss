@@ -15,14 +15,6 @@
   @include fa-icon-solid($fa-var-magnifying-glass);
 }
 
-.chevron-left {
-  @include fa-icon-solid($fa-var-chevron-left);
-}
-
-.chevron-right {
-  @include fa-icon-solid($fa-var-chevron-right);
-}
-
 .fa-solid {
   font-weight: 900;
 }

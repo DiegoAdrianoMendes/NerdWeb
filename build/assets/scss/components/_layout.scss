@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  padding: 0 2.25rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}

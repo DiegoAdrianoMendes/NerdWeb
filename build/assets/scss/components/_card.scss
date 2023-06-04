@@ -1,0 +1,12 @@
+.service-carousel__card {
+  width: 190px;
+  padding: 1rem 1.125rem 1rem 1.5rem;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.078);
+
+  h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: $font-extrabold;
+    @extend .text-base;
+  }
+}

@@ -1,0 +1,47 @@
+.services {
+  margin-top: 4rem;
+
+  &__card {
+    margin-top: 1.5rem;
+    background-color: rgb(40, 49, 55);
+  }
+
+  &__body{
+    padding: 2rem 1.25rem;
+
+    p{
+      color: rgb(226, 247, 255);
+      font-weight: $font-light;
+    }
+  }
+}
+
+#services-carousel {
+  --swiper-navigation-size: 12px;
+
+  .swiper-button-next:after {
+    content: "\f054";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+  }
+
+  .swiper-button-prev:after {
+    content: "\f053";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #f6f6f6;
+    color: #005271;
+    font-size: 0.75rem;
+    border-radius: 50rem;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+}

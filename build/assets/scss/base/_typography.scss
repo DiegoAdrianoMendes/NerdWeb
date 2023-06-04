@@ -4,3 +4,7 @@
     line-height: map-get($values, "line-height");
   }
 }
+
+.uppercase {
+  text-transform: uppercase;
+}

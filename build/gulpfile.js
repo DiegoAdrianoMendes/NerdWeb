@@ -72,7 +72,9 @@ function minifyCSS() {
 function moveJS() {
   return new Promise(function (resolve, reject) {
     src(`assets/js/${name}.js`).pipe(dest(`${outDir}/js`));
-    src(`./node_modules/swiper/swiper-bundle.min.js`).pipe(dest(`${outDir}/js`));
+    src(`./node_modules/swiper/swiper-bundle.min.js`).pipe(
+      dest(`${outDir}/js`)
+    );
     resolve();
   });
 }
@@ -97,8 +99,14 @@ function browser() {
     port: 7000,
     open: false,
   });
-  watch(['./assets/js/**/*.js']).on('change', moveJS);
-  watch(['./assets/scss/**/*.scss']).on('change', compileSass);
+  watch(['./assets/js/**/*.js']).on(
+    'change',
+    series(moveJS, browserSync.reload)
+  );
+  watch(['./assets/scss/**/*.scss']).on(
+    'change',
+    series(compileSass, browserSync.reload)
+  );
   watch(['../*.html']).on('change', browserSync.reload);
 }
 
