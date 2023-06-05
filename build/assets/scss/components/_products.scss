@@ -15,10 +15,15 @@
       font-weight: $font-medium;
     }
   }
+
+  .swiper-slide {
+    width: auto;
+  }
 }
 
 @include media-breakpoint-down(lg) {
   #products-carousel {
+    padding-left: 2.25rem;
     .swiper-scrollbar {
       width: calc(100% - 4.5rem);
       margin-left: 2.25rem;
@@ -41,12 +46,7 @@
     padding-left: 1rem;
 
     .swiper-scrollbar {
-      left: 0;
       width: 100%;
-    }
-
-    .swiper-slide {
-      width: auto;
     }
   }
 }

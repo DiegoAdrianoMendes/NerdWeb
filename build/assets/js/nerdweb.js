@@ -17,14 +17,14 @@ new Swiper("#services-carousel", {
 });
 
 new Swiper("#products-carousel", {
-  slidesPerView: 3,
+  slidesPerView: 'auto',
+  spaceBetween: 16,
   scrollbar: {
     el: "#products-carousel .swiper-scrollbar",
     draggable: true,
   },
   breakpoints: {
-    1024: {
-      slidesPerView: "auto",
+    640: {
       spaceBetween: 26,
     },
   },
