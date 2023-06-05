@@ -7,7 +7,7 @@
   display: flex;
 }
 
-.flex-col{
+.flex-col {
   flex-direction: column;
 }
 
@@ -18,4 +18,29 @@
 .img-fluid {
   width: 100%;
   height: auto;
+}
+
+@include media-breakpoint-up(sm) {
+  .container {
+    max-width: map-get($grid-breakpoints, sm);
+    margin: auto;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .container {
+    max-width: map-get($grid-breakpoints, md);
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .lg\:hidden {
+    max-width: map-get($grid-breakpoints, lg);
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .container {
+    max-width: map-get($grid-breakpoints, xl);
+  }
 }
