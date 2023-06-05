@@ -8,8 +8,11 @@ new Swiper("#services-carousel", {
   },
   breakpoints: {
     1024: {
-      slidesPerView: 3,
+      slidesPerView: 2,
     },
+    1280:{
+        slidesPerView: 3,
+    }
   },
 });
 
