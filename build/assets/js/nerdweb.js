@@ -23,3 +23,28 @@ new Swiper("#selection-carousel", {
     draggable: true,
   },
 });
+
+// Dropdowns Animate
+const dropdowns = document.querySelectorAll(".dropdown-button");
+
+dropdowns.forEach((dropdownButton) => {
+  const items = dropdownButton.parentNode.querySelector("ul");
+
+  dropdownButton.addEventListener("click", function () {
+    const isVisible = dropdownButton.classList.contains("is--active");
+
+    if (isVisible) {
+      setTimeout(function () {
+        items.setAttribute("hidden", "");
+      }, 500);
+      items.classList.remove("fadeInDown");
+      items.classList.add("fadeOutUp");
+    } else {
+      items.removeAttribute("hidden");
+      items.classList.add("fadeInDown");
+      items.classList.remove("fadeOutUp");
+    }
+
+    dropdownButton.classList.toggle("is--active");
+  });
+});
