@@ -6,13 +6,26 @@
     background-color: rgb(40, 49, 55);
   }
 
-  &__body{
+  &__body {
     padding: 2rem 1.25rem;
 
-    p{
+    p {
       color: rgb(226, 247, 255);
       font-weight: $font-light;
     }
+  }
+}
+
+.service-carousel__card {
+  width: 190px;
+  padding: 1rem 1.125rem 1rem 1.5rem;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.078);
+
+  h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: $font-extrabold;
+    @extend .text-base;
   }
 }
 
@@ -43,5 +56,43 @@
 
   .swiper-button-next {
     right: 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .swiper-button-next {
+    left: 3rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 0.5rem;
+  }
+
+  #services-carousel {
+    .swiper-wrapper{
+      padding-top: 0.5rem;
+    }
+  }
+
+  .service-carousel__card {
+    width: calc(100% - 1rem);
+    height: 100%;
+    justify-content: space-around;
+
+    svg{
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .services-carousel {
+    .headline {
+      max-width: 320px;
+    }
+
+    .swiper {
+      width: 65%;
+    }
   }
 }

@@ -1,9 +1,9 @@
 .newsletter {
   margin-bottom: 4rem;
-  
+
   &__wrapper {
     background-color: rgb(243, 243, 243);
-    padding: 2.5rem 1.25rem;
+    padding: 1.25rem 1.5rem 2.5rem 1.25rem;
   }
 
   p {
@@ -29,6 +29,24 @@
 
     button {
       margin-top: 2rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .newsletter {
+    &__wrapper {
+      padding: 2.75rem 8rem;
+    }
+
+    form {
+      input {
+        padding: 0.75rem 1.5rem;
+      }
+      
+      button {
+        margin-top: 1rem;
+      }
     }
   }
 }

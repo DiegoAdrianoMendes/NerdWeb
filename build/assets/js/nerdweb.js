@@ -6,6 +6,11 @@ new Swiper("#services-carousel", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+    },
+  },
 });
 
 new Swiper("#products-carousel", {
@@ -13,6 +18,12 @@ new Swiper("#products-carousel", {
   scrollbar: {
     el: "#products-carousel .swiper-scrollbar",
     draggable: true,
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: "auto",
+      spaceBetween: 26,
+    },
   },
 });
 
@@ -22,6 +33,12 @@ new Swiper("#selection-carousel", {
     el: "#selection-carousel .swiper-scrollbar",
     draggable: true,
   },
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+  },
 });
 
 // Dropdowns Animate
@@ -30,7 +47,7 @@ const dropdowns = document.querySelectorAll(".dropdown-button");
 dropdowns.forEach((dropdownButton) => {
   const items = dropdownButton.parentNode.querySelector("ul");
 
-  dropdownButton.addEventListener("click", function () {
+  dropdownButton.addEventListener("click", function (event) {
     const isVisible = dropdownButton.classList.contains("is-active");
 
     if (isVisible) {

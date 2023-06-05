@@ -13,3 +13,17 @@
     }
   }
 }
+
+
+@include media-breakpoint-up(lg) {
+  .team{
+    &__wrapper{
+      background-image: url("../img/time.png");
+      padding: 4.5rem;
+
+      a{
+        margin-top: 4.5rem;
+      }
+    }
+  }
+}

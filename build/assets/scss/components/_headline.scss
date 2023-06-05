@@ -6,3 +6,12 @@
   margin-right: auto;
   margin-bottom: 1rem;
 }
+
+@include media-breakpoint-up(lg) {
+  .headline {
+    max-width: 100%;
+    $font-size: map-get($font-sizes, "text-xl");
+    font-size: map-get($font-size, "font-size");
+    line-height: map-get($font-size, "line-height");
+  }
+}

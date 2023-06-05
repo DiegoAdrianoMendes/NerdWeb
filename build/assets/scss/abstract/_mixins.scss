@@ -9,3 +9,15 @@
     @content;
   }
 }
+
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+
+  @if $min != 0 and $min != null {
+    @media (max-width: ($min - 1)) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}

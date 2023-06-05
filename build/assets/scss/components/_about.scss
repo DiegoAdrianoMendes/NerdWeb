@@ -7,6 +7,11 @@
     p {
       color: rgb(113, 216, 255);
     }
+
+    .btn {
+      background-color: rgb(0, 137, 188);
+      margin-top: 1rem;
+    }
   }
 
   svg {
@@ -30,6 +35,26 @@
       height: 80px;
       border-radius: 100px;
       box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .about {
+    margin-bottom: 5rem;
+    
+    &__banner {
+      padding: 6rem 5rem;
+    }
+
+    svg {
+      margin-top: 5rem;
+    }
+
+    &__certificates img {
+      width: 160px;
+      height: 160px;
+      box-shadow: none;
     }
   }
 }

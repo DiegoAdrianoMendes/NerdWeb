@@ -1,4 +1,4 @@
-.btn{
+.btn {
   @extend .text-xs;
   padding: 0.5rem 2.5rem;
   text-transform: uppercase;
@@ -7,7 +7,16 @@
   border: none;
 }
 
-.btn--primary{
+.btn--primary {
   background-color: #71d8ff;
   color: $secondary;
+}
+
+@include media-breakpoint-up(lg) {
+  .btn {
+    $font-size: map-get($font-sizes, "text-sm");
+    font-size: map-get($font-size, "font-size");
+    line-height: map-get($font-size, "line-height");
+    padding: 0.875rem 2.5rem;
+  }
 }

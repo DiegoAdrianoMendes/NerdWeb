@@ -1,0 +1,9 @@
+@include media-breakpoint-up(lg) {
+  .banner {
+    margin-bottom: 4rem;
+
+    img {
+      border-bottom: 5px solid $primary;
+    }
+  }
+}

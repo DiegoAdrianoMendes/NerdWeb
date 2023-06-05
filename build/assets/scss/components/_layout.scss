@@ -21,26 +21,54 @@
 }
 
 @include media-breakpoint-up(sm) {
-  .container {
+  .container,
+  .products {
     max-width: map-get($grid-breakpoints, sm);
     margin: auto;
   }
 }
 
 @include media-breakpoint-up(md) {
-  .container {
+  .container,
+  .products {
     max-width: map-get($grid-breakpoints, md);
   }
 }
 
 @include media-breakpoint-up(lg) {
   .lg\:hidden {
+    display: none;
+  }
+
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:wrap {
+    flex-wrap: wrap;
+  }
+
+  .lg\:inline-block {
+    display: inline-block;
+  }
+
+  .lg\:container,
+  .container,
+  .products {
     max-width: map-get($grid-breakpoints, lg);
+    margin: auto;
+    padding: 0 2.25rem;
   }
 }
 
 @include media-breakpoint-up(xl) {
-  .container {
+  .lg\:container,
+  .container,
+  .products {
     max-width: map-get($grid-breakpoints, xl);
   }
 }

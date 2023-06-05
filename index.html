@@ -36,7 +36,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/nerdweb.css" />
     <title>NerdWeb</title>
   </head>
@@ -75,38 +79,52 @@
           d="M0 1.00423C0 1.00423 90.7794 1.26277 117 1.00423C143.221 0.745696 145.262 14.6663 145.262 15.4419M145.262 15.4419V16M145.262 15.4419C145.262 14.6665 147.874 0.745769 174 1.00423C200.126 1.2627 290 1.00849 290 1.00849"
         />
       </symbol>
+      <symbol id="division-vertical" viewBox="0 0 16 317" fill="none">
+        <path
+          d="M15.496 0.499756C15.496 0.499756 15.2375 99.418 15.496 127.989C15.7546 156.561 1.83402 158.785 1.05837 158.785M1.05837 158.785H0.500285M1.05837 158.785C1.8338 158.785 15.7545 161.631 15.496 190.1C15.2376 218.568 15.4918 316.5 15.4918 316.5"
+        />
+      </symbol>
     </svg>
     <header>
       <nav class="navbar">
-        <div class="container flex align-item-center justify-content-between">
-          <a href="#">
-            <img
-              src="./assets/img/nerdweb.png"
-              alt="NerdWeb"
-              width="104"
-              height="20"
-            />
-          </a>
-          <ul style="display: none">
-            <li><a href="#">Nerdweb</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Atendimento</a></li>
-          </ul>
-          <div style="display: none">
-            <a href="#">DIA a DIA</a>
-            <ul>
-              <li><a href="#">Lorem</a></li>
-              <li><a href="#">Lorem</a></li>
-              <li><a href="#">Lorem</a></li>
+        <div
+          class="container flex align-item-center justify-content-between lg:justify-content-between"
+        >
+          <div class="flex">
+            <a href="#">
+              <img
+                src="./assets/img/nerdweb.png"
+                alt="NerdWeb"
+                width="104"
+                height="20"
+              />
+            </a>
+            <ul
+              class="hidden lg:flex ml-0 lg:ml-10 gap-1 text-sm text-light align-items-center"
+            >
+              <li><a href="#">Nerdweb</a></li>
+              <li><a href="#">Serviços</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Atendimento</a></li>
             </ul>
           </div>
           <div class="flex gap-1 align-items-center">
+            <div class="dropdown dropdown-absolute hidden lg:flex">
+              <a href="#" class="text-black dropdown-button uppercase text-xs">
+                Dia a dia
+              </a>
+              <ul class="dropdown-menu animated" hidden>
+                <li><a href="#">Soluções Site</a></li>
+                <li><a href="#">Soluções por E-commerce</a></li>
+                <li><a href="#">Soluções por Redes Sociais</a></li>
+                <li><a href="#">Soluções Landing Page</a></li>
+              </ul>
+            </div>
             <div class="flex gap-base">
               <i class="circle-user text-primary" style="font-size: 20px"></i>
               <i class="cart-shopping text-primary" style="font-size: 20px"></i>
             </div>
-            <div class="hamburger hamburger--squeeze">
+            <div class="hamburger hamburger--squeeze lg:hidden">
               <div class="hamburger-box">
                 <div class="hamburger-inner"></div>
               </div>
@@ -224,7 +242,7 @@
         </ul>
       </div>
     </header>
-    <section>
+    <section class="banner">
       <img
         src="./assets/img/banner.png"
         srcset="
@@ -238,77 +256,103 @@
       />
     </section>
     <section class="container">
-      <div>
-        <h2 class="headline text-secondary text-center mt-2 mb-base">
-          Descubra os serviços <br />
-          Nerdweb
-          <span class="text-primary">
-            que mais combinam com a sua empresa
-          </span>
-        </h2>
-        <div class="flex justify-content-center">
-          <svg width="138" height="30" stroke="#00AEEF">
-            <use xlink:href="#division"></use>
-          </svg>
-        </div>
-        <a href="#" class="btn btn--primary hidden">Ver Serviços</a>
-      </div>
-      <div class="division"></div>
-      <div class="swiper py-2" id="services-carousel">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div
-              class="service-carousel__card flex align-items-center flex-col mx-auto"
+      <div class="lg:flex lg:wrap services-carousel">
+        <div class="lg:flex lg:mt-4">
+          <div>
+            <h2
+              class="headline text-secondary text-center mt-2 mb-base lg:text-xl lg:text-start"
             >
-              <svg width="100" height="100" color="#005271">
-                <use xlink:href="#route-fork"></use>
+              Descubra os serviços <br class="lg:hidden" />
+              Nerdweb
+              <span class="text-primary">
+                que mais combinam com a sua empresa
+              </span>
+            </h2>
+            <div class="flex justify-content-center lg:hidden">
+              <svg width="138" height="30" stroke="#00AEEF">
+                <use xlink:href="#division"></use>
               </svg>
-              <h3>Título</h3>
-              <p class="text-xs text-center">
-                Dolor sit ameti consetetur <br />
-                sadipscing elitr, sed
-              </p>
             </div>
+            <a href="#" class="btn btn--primary hidden lg:inline-block"
+              >Ver Serviços</a
+            >
           </div>
-          <div class="swiper-slide">
-            <div
-              class="service-carousel__card flex align-items-center flex-col mx-auto"
-            >
-              <svg width="100" height="100" color="#005271">
-                <use xlink:href="#headset"></use>
-              </svg>
-              <h3>Serviço</h3>
-              <p class="text-xs text-center">
-                Dolor sit ameti consetetur <br />
-                sadipscing elitr, sed
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div
-              class="service-carousel__card flex align-items-center flex-col mx-auto"
-            >
-              <svg width="100" height="100" color="#005271">
-                <use xlink:href="#form-check"></use>
-              </svg>
-              <h3>Exemplo</h3>
-              <p class="text-xs text-center">
-                Dolor sit ameti consetetur <br />
-                sadipscing elitr, sed
-              </p>
-            </div>
+          <div class="flex justify-content-center ml-base hidden lg:block">
+            <svg width="16" height="317" stroke="#00AEEF">
+              <use xlink:href="#division-vertical"></use>
+            </svg>
           </div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-      <div class="flex justify-content-center">
-        <a href="#" class="btn btn--primary">Ver Serviços</a>
+        <div class="swiper py-2" id="services-carousel">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="service-carousel__card flex align-items-center flex-col mx-auto"
+              >
+                <svg width="100" height="100" color="#005271">
+                  <use xlink:href="#route-fork"></use>
+                </svg>
+                <h3>Título</h3>
+                <p class="text-xs text-center">
+                  Dolor sit ameti consetetur <br />
+                  sadipscing elitr, sed
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="service-carousel__card flex align-items-center flex-col mx-auto"
+              >
+                <svg width="100" height="100" color="#005271">
+                  <use xlink:href="#headset"></use>
+                </svg>
+                <h3>Serviço</h3>
+                <p class="text-xs text-center">
+                  Dolor sit ameti consetetur <br />
+                  sadipscing elitr, sed
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="service-carousel__card flex align-items-center flex-col mx-auto"
+              >
+                <svg width="100" height="100" color="#005271">
+                  <use xlink:href="#form-check"></use>
+                </svg>
+                <h3>Exemplo</h3>
+                <p class="text-xs text-center">
+                  Dolor sit ameti consetetur <br />
+                  sadipscing elitr, sed
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="service-carousel__card flex align-items-center flex-col mx-auto"
+              >
+                <svg width="100" height="100" color="#005271">
+                  <use xlink:href="#form-check"></use>
+                </svg>
+                <h3>Exemplo</h3>
+                <p class="text-xs text-center">
+                  Dolor sit ameti consetetur <br />
+                  sadipscing elitr, sed
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="flex justify-content-center lg:hidden">
+          <a href="#" class="btn btn--primary">Ver Serviços</a>
+        </div>
       </div>
     </section>
     <section class="products">
       <h2 class="headline text-secondary text-center mb-0">
-        Conheça todos <br />
+        Conheça todos <br class="lg:hidden" />
         <span class="text-primary">produtos Nerdweb</span>
       </h2>
       <div
@@ -367,7 +411,25 @@
           <div class="swiper-slide">
             <div class="products__card flex align-items-center flex-col">
               <img src="./assets/img/shop.png" alt="Redes" />
-              <span>Redes Diego</span>
+              <span>Redes</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="products__card flex align-items-center flex-col">
+              <img src="./assets/img/laptop.png" alt="Sites" />
+              <span>Sites</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="products__card flex align-items-center flex-col">
+              <img src="./assets/img/phone.png" alt="E-Commerce" />
+              <span>E-Commerce</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="products__card flex align-items-center flex-col">
+              <img src="./assets/img/shop.png" alt="Redes" />
+              <span>Redes</span>
             </div>
           </div>
         </div>
@@ -378,12 +440,14 @@
       </div>
     </section>
     <section class="team container">
-      <div class="team__wrapper flex flex-col align-items-center">
-        <h2 class="headline text-secondary text-center">
-          Faça parte do nosso <br />
+      <div
+        class="team__wrapper flex flex-col align-items-center lg:align-items-start"
+      >
+        <h2 class="headline text-secondary text-center lg:text-start lg:ml-0">
+          Faça parte do nosso <br class="lg:hidden" />
           time de nerds
         </h2>
-        <p class="text-xs text-center">
+        <p class="text-xs text-center lg:text-start lg:text-lg">
           <strong>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed <br />
             diam nonumy eirmod tempor invidunt ut labore et dolore <br />
@@ -473,15 +537,19 @@
       </div>
     </section>
     <section class="about">
-      <div class="about__banner flex flex-col align-items-center">
-        <h2 class="headline text-white text-center">
-          Conheça a visão Nerdweb e entenda nossa história
-        </h2>
-        <p class="text-center text-xs">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonum eirmod tem or
-        </p>
-        <a href="#" class="btn btn--primary text-white">Ir para Sobre</a>
+      <div class="lg:container">
+        <div
+          class="about__banner flex flex-col align-items-center lg:align-items-start"
+        >
+          <h2 class="headline text-white text-center lg:ml-0">
+            Conheça a visão Nerdweb e entenda nossa história
+          </h2>
+          <p class="text-center text-xs lg:text-lg lg:w-50 lg:text-start">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonum eirmod tem or
+          </p>
+          <a href="#" class="btn text-white">Ir para Sobre</a>
+        </div>
       </div>
       <div class="flex justify-content-center">
         <svg width="290" height="15" stroke="#00AEEF">
@@ -489,47 +557,56 @@
         </svg>
       </div>
       <div class="container">
-        <p>
-          <strong>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            <br />
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-          </strong>
-        </p>
-        <p class="text-xs">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua.
-          <strong>
-            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-            kasd gubergren ,
-          </strong>
-          no sea takimata sanctus est Lorem ipsum dolor sit amet Lorem ipsum
-          dolor sit amet, consetetur
-          <strong>
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam
-          </strong>
-          volu tua. At vero eos et accusam et
-        </p>
-        <div class="about__certificates flex justify-content-around">
-          <img src="./assets/img/selo-1.png" alt="Sele" />
-          <img src="./assets/img/selo-2.png" alt="Sele" />
-          <img src="./assets/img/selo-3.png" alt="Sele" />
+        <div class="lg:flex">
+          <div class="lg:w-50">
+            <p>
+              <strong>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam
+                <br />
+                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              </strong>
+            </p>
+            <p class="text-xs lg:text-base">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua.
+              <strong>
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren ,
+              </strong>
+              no sea takimata sanctus est Lorem ipsum dolor sit amet Lorem ipsum
+              dolor sit amet, consetetur
+              <strong>
+                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam
+              </strong>
+              volu tua. At vero eos et accusam et
+            </p>
+          </div>
+          <div class="about__certificates flex justify-content-around lg:w-50">
+            <img src="./assets/img/selo-1.png" alt="Sele" />
+            <img src="./assets/img/selo-2.png" alt="Sele" />
+            <img src="./assets/img/selo-3.png" alt="Sele" />
+          </div>
         </div>
       </div>
     </section>
     <section class="newsletter container">
-      <div class="newsletter__wrapper">
-        <h2 class="headline text-center text-secondary mb-xs">
-          Novidades e <br />
-          descontos especiais
-        </h2>
-        <p class="text-xs text-center">
-          Descubra com a gente uma vida nova, saudável, cheia de sabor e
-          desconto!
-        </p>
-        <form class="flex flex-col">
+      <div class="newsletter__wrapper lg:flex">
+        <div class="lg:w-40">
+          <h2
+            class="headline text-center text-secondary mb-xs lg:text-start lg:mt-0"
+          >
+            Novidades e <br />
+            descontos especiais
+          </h2>
+          <p class="text-xs text-center lg:text-start lg:text-lg lg:w-80">
+            Descubra com a gente uma vida nova, saudável, cheia de sabor e
+            desconto!
+          </p>
+        </div>
+        <form class="flex flex-col lg:w-60">
           <input
             type="text"
             placeholder="NOME"
@@ -540,95 +617,101 @@
             placeholder="E-Mail"
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
           />
-          <button class="btn btn--primary">Cadastrar</button>
+          <button class="btn btn--primary lg:w-fit">Cadastrar</button>
         </form>
       </div>
     </section>
     <footer class="footer">
       <div class="container">
-        <div>
-          <img
-            src="./assets/img/logo.png"
-            alt="Logo NerdWeb"
-            class="footer__img"
-          />
-        </div>
-        <div>
-          <h4 class="text-white text-sm uppercase text-extrabold mb-xs">
-            NerdWeb
-          </h4>
-          <ul class="text-xs">
-            <li>
-              <a href="#" class="text-primary">Sobre</a>
-            </li>
-            <li>
-              <a href="#" class="text-primary">Nossos Princípios</a>
-            </li>
-            <li>
-              <a href="#" class="text-primary">Funcionários</a>
-            </li>
-            <li>
-              <a href="#" class="text-primary">Trabalhe Conosco</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-white text-sm uppercase text-extrabold mb-xs">
-            Ajuda
-          </h4>
-          <ul class="text-xs">
-            <li>
-              <a href="#" class="text-primary">Prazos e Entregas</a>
-            </li>
-            <li>
-              <a href="#" class="text-primary">Troca e Devoluções</a>
-            </li>
-            <li>
-              <a href="#" class="text-primary">Políticas de Privacidade</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-white text-sm uppercase text-extrabold mb-xs">
-            Atendimento
-          </h4>
-          <ul class="text-xs">
-            <li>
-              <a href="#" class="text-primary">Dúvidas Frequentes</a>
-            </li>
-            <li>
-              <a href="tel:+41333333" class="text-primary">(41) 3333-3333</a>
-            </li>
-            <li>
-              <a href="malito:teste@nerdweb.com.br" class="text-primary"
-                >teste@nerdweb.com.br</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="flex flex-col">
+        <div class="lg:flex justify-content-between footer__top">
+          <div class="lg:w-33">
+            <img
+              src="./assets/img/logo.png"
+              alt="Logo NerdWeb"
+              class="footer__img"
+            />
+          </div>
           <div>
-            <h4 class="text-white text-sm uppercase text-extrabold mb-xs">
+            <h4 class="text-white text-sm lg:text-lg uppercase text-extrabold mb-xs">
+              NerdWeb
+            </h4>
+            <ul class="text-xs lg:text-sm">
+              <li>
+                <a href="#" class="text-primary">Sobre</a>
+              </li>
+              <li>
+                <a href="#" class="text-primary">Nossos Princípios</a>
+              </li>
+              <li>
+                <a href="#" class="text-primary">Funcionários</a>
+              </li>
+              <li>
+                <a href="#" class="text-primary">Trabalhe Conosco</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white text-sm lg:text-lg uppercase text-extrabold mb-xs">
+              Ajuda
+            </h4>
+            <ul class="text-xs lg:text-sm">
+              <li>
+                <a href="#" class="text-primary">Prazos e Entregas</a>
+              </li>
+              <li>
+                <a href="#" class="text-primary">Troca e Devoluções</a>
+              </li>
+              <li>
+                <a href="#" class="text-primary">Políticas de Privacidade</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white text-sm lg:text-lg uppercase text-extrabold mb-xs">
+              Atendimento
+            </h4>
+            <ul class="text-xs lg:text-sm">
+              <li>
+                <a href="#" class="text-primary">Dúvidas Frequentes</a>
+              </li>
+              <li>
+                <a href="tel:+41333333" class="text-primary">(41) 3333-3333</a>
+              </li>
+              <li>
+                <a href="malito:teste@nerdweb.com.br" class="text-primary"
+                  >teste@nerdweb.com.br</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white text-sm lg:text-lg uppercase text-extrabold mb-xs">
               Horário de Atendimento
             </h4>
-            <p class="text-xs time">
+            <p class="text-xs lg:text-sm time">
               De segunda a sexta-feira <br />
               das 08hOO às 12hOO e <br />
               das 13hOO às 17h40
             </p>
           </div>
+        </div>
+        <div class="flex flex-col">
           <hr />
-          <p class="text-xs footer__copy">
-            2022 Nerdweb - Extreme Hosting, todos os direitos reservados.
-          </p>
-          <div class="footer__social">
-            <h4 class="text-lg text-center">Fique em sintonia com a gente</h4>
-            <div class="footer__icons flex justify-content-around">
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-instagram"></i>
-              <i class="fa-brands fa-linkedin-in"></i>
-              <i class="fa-brands fa-twitter"></i>
-              <i class="fa-brands fa-youtube"></i>
+          <div class="lg:flex justify-content-between">
+            <p class="text-xs footer__copy">
+              2022 Nerdweb - Extreme Hosting, todos os direitos reservados.
+            </p>
+            <div class="footer__social">
+              <h4 class="text-lg text-center">Fique em sintonia com a gente</h4>
+              <div
+                class="footer__icons flex justify-content-around lg:justify-content-between"
+              >
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+              </div>
             </div>
           </div>
         </div>

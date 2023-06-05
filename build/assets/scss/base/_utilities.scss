@@ -2,16 +2,19 @@ $utilities: (
   "justify-content": (
     property: justify-content,
     class: justify-content,
+    responsive: xs lg,
     values: (
       between: space-between,
       center: center,
       around: space-around,
+      start: start,
     ),
   ),
   "align-items": (
     property: align-items,
     class: align-items,
-    values: center,
+    responsive: xs lg,
+    values: center start,
   ),
   "gap": (
     property: gap,
@@ -28,9 +31,20 @@ $utilities: (
       auto: auto,
     ),
   ),
+  "ml": (
+    property: margin-left,
+    class: ml,
+    responsive: xs lg,
+    values: (
+      0: 0,
+      "base": 1rem,
+      10: 4rem,
+    ),
+  ),
   "mt": (
     property: margin-top,
     class: mt,
+    responsive: xs lg,
     values: (
       0: 0,
       2: 1.5rem,
@@ -55,8 +69,9 @@ $utilities: (
   ),
   "text-align": (
     property: text-align,
+    responsive: xs lg,
     class: text,
-    values: center,
+    values: center start,
   ),
   "color": (
     property: color,
@@ -64,6 +79,7 @@ $utilities: (
     values: (
       primary: $primary,
       secondary: $secondary,
+      black: $black,
     ),
   ),
   "font-weight": (
@@ -71,6 +87,20 @@ $utilities: (
     class: text,
     values: (
       extrabold: 900,
+      light: 300,
+    ),
+  ),
+  "width": (
+    property: width,
+    class: w,
+    responsive: xs lg,
+    values: (
+      fit: fit-content,
+      33: 33%,
+      40: 40%,
+      50: 50%,
+      60: 60%,
+      80: 80%,
     ),
   ),
 );
