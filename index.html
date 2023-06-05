@@ -84,6 +84,11 @@
           d="M15.496 0.499756C15.496 0.499756 15.2375 99.418 15.496 127.989C15.7546 156.561 1.83402 158.785 1.05837 158.785M1.05837 158.785H0.500285M1.05837 158.785C1.8338 158.785 15.7545 161.631 15.496 190.1C15.2376 218.568 15.4918 316.5 15.4918 316.5"
         />
       </symbol>
+      <symbol id="division-desktop" viewBox="0 0 1280 21" fill="none">
+        <path
+          d="M0 1.00496C0 1.00496 400.681 1.34969 516.414 1.00496C632.146 0.660224 641.157 19.2216 641.157 20.2559M641.157 20.2559V21M641.157 20.2559C641.157 19.2219 652.685 0.660321 768 1.00496C883.315 1.34959 1280 1.01063 1280 1.01063"
+        />
+      </symbol>
     </svg>
     <header>
       <nav class="navbar">
@@ -551,9 +556,12 @@
           <a href="#" class="btn text-white">Ir para Sobre</a>
         </div>
       </div>
-      <div class="flex justify-content-center">
-        <svg width="290" height="15" stroke="#00AEEF">
+      <div class="flex justify-content-center container">
+        <svg width="290" height="15" stroke="#00AEEF" class="lg:hidden">
           <use xlink:href="#division-2"></use>
+        </svg>
+        <svg width="1280" height="21" stroke="#00AEEF" class="hidden lg:block">
+          <use xlink:href="#division-desktop"></use>
         </svg>
       </div>
       <div class="container">
@@ -623,7 +631,9 @@
     </section>
     <footer class="footer">
       <div class="container">
-        <div class="sm:flex sm:wrap lg:nowrap justify-content-between footer__top">
+        <div
+          class="sm:flex sm:wrap lg:nowrap justify-content-between footer__top"
+        >
           <div class="sm:w-100 lg:w-fit xl:w-33">
             <img
               src="./assets/img/logo.png"
@@ -632,7 +642,9 @@
             />
           </div>
           <div class="sm:w-50 lg:w-auto">
-            <h4 class="text-white text-sm lg:text-lg uppercase text-extrabold mb-xs">
+            <h4
+              class="text-white text-sm lg:text-lg uppercase text-extrabold mb-xs"
+            >
               NerdWeb
             </h4>
             <ul class="text-xs lg:text-sm">
@@ -651,7 +663,9 @@
             </ul>
           </div>
           <div class="sm:w-50 lg:w-auto">
-            <h4 class="text-white text-sm lg:text-lg uppercase text-extrabold mb-xs">
+            <h4
+              class="text-white text-sm lg:text-lg uppercase text-extrabold mb-xs"
+            >
               Ajuda
             </h4>
             <ul class="text-xs lg:text-sm">
@@ -667,7 +681,9 @@
             </ul>
           </div>
           <div class="sm:w-50 lg:w-auto">
-            <h4 class="text-white text-sm lg:text-lg uppercase text-extrabold mb-xs">
+            <h4
+              class="text-white text-sm lg:text-lg uppercase text-extrabold mb-xs"
+            >
               Atendimento
             </h4>
             <ul class="text-xs lg:text-sm">
@@ -685,7 +701,9 @@
             </ul>
           </div>
           <div class="sm:w-50 lg:w-auto">
-            <h4 class="text-white text-sm lg:text-lg uppercase text-extrabold mb-xs">
+            <h4
+              class="text-white text-sm lg:text-lg uppercase text-extrabold mb-xs"
+            >
               Horário de Atendimento
             </h4>
             <p class="text-xs lg:text-sm time">
