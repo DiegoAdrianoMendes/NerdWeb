@@ -93,14 +93,16 @@ $utilities: (
   "width": (
     property: width,
     class: w,
-    responsive: xs lg,
+    responsive: xs sm lg,
     values: (
+      auto: auto,
       fit: fit-content,
       33: 33%,
       40: 40%,
       50: 50%,
       60: 60%,
       80: 80%,
+      100: 100%,
     ),
   ),
 );

@@ -15,7 +15,7 @@
   display: none;
 }
 
-.grid{
+.grid {
   display: grid;
 }
 
@@ -29,6 +29,14 @@
   .products {
     max-width: map-get($grid-breakpoints, sm);
     margin: auto;
+  }
+
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:wrap {
+    flex-wrap: wrap;
   }
 }
 
@@ -54,6 +62,10 @@
 
   .lg\:wrap {
     flex-wrap: wrap;
+  }
+
+  .lg\:nowrap {
+    flex-wrap: nowrap;
   }
 
   .lg\:inline-block {

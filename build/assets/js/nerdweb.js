@@ -7,17 +7,17 @@ new Swiper("#services-carousel", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-    1024: {
+    640: {
       slidesPerView: 2,
     },
-    1280:{
-        slidesPerView: 3,
-    }
+    1280: {
+      slidesPerView: 3,
+    },
   },
 });
 
 new Swiper("#products-carousel", {
-  slidesPerView: 'auto',
+  slidesPerView: "auto",
   spaceBetween: 16,
   scrollbar: {
     el: "#products-carousel .swiper-scrollbar",
@@ -37,6 +37,10 @@ new Swiper("#selection-carousel", {
     draggable: true,
   },
   breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
     1024: {
       slidesPerView: 3,
       spaceBetween: 24,
