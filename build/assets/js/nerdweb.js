@@ -55,6 +55,7 @@ dropdowns.forEach((dropdownButton) => {
   const items = dropdownButton.parentNode.querySelector("ul");
 
   dropdownButton.addEventListener("click", function (event) {
+    event.preventDefault();
     const isVisible = dropdownButton.classList.contains("is-active");
 
     if (isVisible) {
