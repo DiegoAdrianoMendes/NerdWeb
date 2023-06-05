@@ -31,7 +31,7 @@ dropdowns.forEach((dropdownButton) => {
   const items = dropdownButton.parentNode.querySelector("ul");
 
   dropdownButton.addEventListener("click", function () {
-    const isVisible = dropdownButton.classList.contains("is--active");
+    const isVisible = dropdownButton.classList.contains("is-active");
 
     if (isVisible) {
       setTimeout(function () {
@@ -45,6 +45,28 @@ dropdowns.forEach((dropdownButton) => {
       items.classList.remove("fadeOutUp");
     }
 
-    dropdownButton.classList.toggle("is--active");
+    dropdownButton.classList.toggle("is-active");
+  });
+});
+
+// Menu Animate
+const menu = document.querySelectorAll(".hamburger");
+
+menu.forEach((menu) => {
+  menu.addEventListener("click", function () {
+    const menuMobile = document.querySelector(".navbar__mobile");
+    const isVisible = menuMobile.classList.contains("is-active");
+
+    if (isVisible) {
+      menuMobile.classList.remove("fadeInRightBig");
+      menuMobile.classList.add("fadeOutRight");
+      setTimeout(function () {
+        menuMobile.classList.remove("is-active");
+      }, 1000);
+    } else {
+      menuMobile.classList.remove("fadeOutRight");
+      menuMobile.classList.add("fadeInRightBig");
+      menuMobile.classList.add("is-active");
+    }
   });
 });

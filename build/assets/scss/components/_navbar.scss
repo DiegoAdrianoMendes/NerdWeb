@@ -19,7 +19,7 @@
     background-color: rgb(40, 49, 55);
     border-top: 3px solid rgb(0, 137, 188);
 
-    &.is--active {
+    &.is-active {
       display: block;
     }
 
@@ -44,7 +44,7 @@
 
     .dropdown {
       &-button {
-        &.is--active {
+        &.is-active {
           color: $white;
 
           &:after {
