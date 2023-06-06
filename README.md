@@ -16,7 +16,7 @@
 <img src="https://github.com/diegoadrianomendes/nerdweb/blob/main/build/assets/img/screen-safari.png?raw=true">
 
 <p align="center">
-    <a href="https://nerdweb-landing-page.netlify.app/">
+    <a href="https://nerdweb-landing-page.netlify.app/" target="_blank">
         <img src="https://github.com/diegoadrianomendes/nerdweb/blob/main/build/assets/img/button-demo.png?raw=true">
     </a>
     <br><br>
