@@ -31,7 +31,8 @@ function compileSass() {
 }
 
 function minifyCSS() {
-  return new Promise(function (resolve, reject) {
+  return new Promise(async function (resolve, reject) {
+    await new Promise(resolve => setTimeout(resolve, 2000));
     let start = Date.now();
     src(`${outDir}/css/${name}.css`)
       .pipe(rename(`${name}.min.css`))
