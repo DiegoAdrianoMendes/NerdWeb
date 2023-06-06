@@ -33,7 +33,6 @@ function compileSass() {
 function minifyCSS() {
   return new Promise(async function (resolve, reject) {
     await new Promise(resolve => setTimeout(resolve, 2000));
-    let start = Date.now();
     src(`${outDir}/css/${name}.css`)
       .pipe(rename(`${name}.min.css`))
       .pipe(
@@ -53,15 +52,6 @@ function minifyCSS() {
             },
             debug: true,
           },
-          (output) => {
-            console.log(
-              `\x1b[32mMinified in ${
-                Date.now() - start
-              }ms. Minified by ${Math.floor(
-                output.stats.efficiency * 100
-              )}%\x1b[0m`
-            );
-          }
         )
       )
 
