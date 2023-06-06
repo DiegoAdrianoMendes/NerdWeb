@@ -1,51 +1,12 @@
 "use-strict";
 
-new Swiper("#services-carousel", {
-  slidesPerView: 1,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    640: {
-      slidesPerView: 2,
-    },
-    1280: {
-      slidesPerView: 3,
-    },
-  },
-});
+const swiperCarousels = document.querySelectorAll(".swiper[data-swiper]");
 
-new Swiper("#products-carousel", {
-  slidesPerView: "auto",
-  spaceBetween: 16,
-  scrollbar: {
-    el: "#products-carousel .swiper-scrollbar",
-    draggable: true,
-  },
-  breakpoints: {
-    640: {
-      spaceBetween: 26,
-    },
-  },
-});
+swiperCarousels.forEach((swiperCarousel) => {
+  const id = `#${swiperCarousel.id}`;
+  const options = swiperCarousel.getAttribute("data-swiper");
 
-new Swiper("#selection-carousel", {
-  slidesPerView: 1,
-  scrollbar: {
-    el: "#selection-carousel .swiper-scrollbar",
-    draggable: true,
-  },
-  breakpoints: {
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 16,
-    },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 24,
-    },
-  },
+  new Swiper(id, JSON.parse(options));
 });
 
 // Dropdowns Animate
@@ -101,7 +62,6 @@ window.addEventListener("scroll", function () {
   const subNavbar = this.document.querySelector(".subnavbar");
 
   if (scrollCurrent > 50) {
-    // hide navbar
     subNavbar.classList.add("fadeOutUp");
   } else {
     subNavbar.classList.add("fadeInDown");

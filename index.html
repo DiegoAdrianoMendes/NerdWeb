@@ -304,7 +304,25 @@
             </svg>
           </div>
         </div>
-        <div class="swiper py-2" id="services-carousel">
+        <div
+          class="swiper py-2"
+          id="services-carousel"
+          data-swiper='{
+            "slidesPerView": 1,
+            "navigation": {
+                "nextEl": "#services-carousel .swiper-button-next",
+                "prevEl": "#services-carousel .swiper-button-prev"
+            },
+            "breakpoints": {
+                "640": {
+                    "slidesPerView": 2
+                },
+                "1280": {
+                    "slidesPerView": 3
+                }
+            }
+          }'
+        >
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div
@@ -379,6 +397,19 @@
       <div
         class="swiper products__carousel has--scrollbar"
         id="products-carousel"
+        data-swiper='{
+            "slidesPerView": "auto",
+            "spaceBetween": 16,
+            "scrollbar": {
+              "el": "#products-carousel .swiper-scrollbar",
+              "draggable": true
+            },
+            "breakpoints": {
+              "640": {
+                "spaceBetween": 26
+              }
+            }
+          }'
       >
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -485,7 +516,27 @@
         </h2>
         <span class="text-xs text-primary">Conheça nossa seleção especial</span>
       </div>
-      <div class="swiper has--scrollbar" id="selection-carousel">
+      <div
+        class="swiper has--scrollbar"
+        id="selection-carousel"
+        data-swiper='{
+            "slidesPerView": 1,
+            "scrollbar": {
+                "el": "#selection-carousel .swiper-scrollbar",
+                "draggable": true
+            },
+            "breakpoints": {
+                "640": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 16
+                },
+                "1024": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 24
+                }
+            }
+        }'
+      >
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="services__card">
