@@ -1,22 +1,22 @@
-'use-strict';
-const { series, src, dest, watch } = require('gulp');
-const cleanCss = require('gulp-clean-css');
-const minify = require('gulp-minify');
-const browserSync = require('browser-sync').create();
-const autoprefixer = require('autoprefixer');
-const sourcemaps = require('gulp-sourcemaps');
-const postCSS = require('gulp-postcss');
-const sass = require('gulp-sass')(require('sass'));
-const rename = require('gulp-rename');
+"use-strict";
+const { series, src, dest, watch } = require("gulp");
+const cleanCss = require("gulp-clean-css");
+const minify = require("gulp-minify");
+const browserSync = require("browser-sync").create();
+const autoprefixer = require("autoprefixer");
+const sourcemaps = require("gulp-sourcemaps");
+const postCSS = require("gulp-postcss");
+const sass = require("gulp-sass")(require("sass"));
+const rename = require("gulp-rename");
 const optionsPostCSS = [
   autoprefixer({
-    Browserslist: ['last 3 version'],
+    Browserslist: ["last 3 version"],
   }),
 ];
 
 // Defined Theme
-const name = 'nerdweb';
-const outDir = '../assets';
+const name = "nerdweb";
+const outDir = "../assets";
 
 function compileSass() {
   return new Promise(function (resolve, reject) {
@@ -24,7 +24,7 @@ function compileSass() {
       .pipe(sourcemaps.init())
       .pipe(sass())
       .pipe(postCSS(optionsPostCSS))
-      .pipe(sourcemaps.write('.'))
+      .pipe(sourcemaps.write("."))
       .pipe(dest(`${outDir}/css`));
     resolve();
   });
@@ -38,7 +38,7 @@ function minifyCSS() {
       .pipe(
         cleanCss(
           {
-            compatibility: '*',
+            compatibility: "*",
             format: {
               breaks: {
                 afterAtRule: true,
@@ -84,7 +84,7 @@ function minifyJS() {
     .pipe(
       minify({
         ext: {
-          min: '.min.js',
+          min: ".min.js",
         },
         noSource: true,
       })
@@ -94,20 +94,31 @@ function minifyJS() {
 
 function browser() {
   browserSync.init(null, {
-    proxy: 'http://127.0.0.1:5500/',
+    proxy: "http://127.0.0.1:5500/",
     files: [`${outDir}/**/*.*`],
     port: 7000,
     open: false,
+    plugins: ["bs-rewrite-rules"],
+    rewriteRules: [
+      {
+        match: /nerdweb.min.js/gi,
+        replace: "nerdweb.js",
+      },
+      {
+        match: /nerdweb.min.css/gi,
+        replace: "nerdweb.css",
+      },
+    ],
   });
-  watch(['./assets/js/**/*.js']).on(
-    'change',
+  watch(["./assets/js/**/*.js"]).on(
+    "change",
     series(moveJS, browserSync.reload)
   );
-  watch(['./assets/scss/**/*.scss']).on(
-    'change',
+  watch(["./assets/scss/**/*.scss"]).on(
+    "change",
     series(compileSass, browserSync.reload)
   );
-  watch(['../*.html']).on('change', browserSync.reload);
+  watch(["../*.html"]).on("change", browserSync.reload);
 }
 
 exports.default = browser;
