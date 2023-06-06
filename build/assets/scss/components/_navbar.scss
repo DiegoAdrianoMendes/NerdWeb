@@ -58,8 +58,8 @@
     }
   }
 
-  a + ul li a{
-    color: #2C3A2F;
+  a + ul li a {
+    color: #2c3a2f;
   }
 }
 
@@ -107,4 +107,104 @@
 
 header + * {
   margin-top: 51px;
+}
+
+@include media-breakpoint-up(xl) {
+  .subnavbar {
+    .dropdown-menu {
+      width: calc(1280px - 4.5rem) !important;
+      padding: 2rem 8rem !important;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .subnavbar {
+    &__item a {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .subnavbar {
+    position: fixed;
+    background-color: #033244;
+    padding: 1rem 0;
+    top: 51px;
+
+    .input__wrapper {
+      border: 1px solid $primary;
+      border-radius: 8px;
+
+      input {
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        color: $white;
+
+        &::placeholder {
+          color: rgb(226, 247, 255);
+          opacity: 0.5;
+        }
+      }
+
+      i {
+        padding-right: 1rem;
+      }
+    }
+
+    &__item a {
+      font-family: $font-secondary;
+      font-weight: $font-book;
+      font-size: 1rem;
+    }
+
+    .dropdown {
+      &-menu {
+        position: absolute;
+        background: $white;
+        border-top: 4px solid $primary;
+        top: 100%;
+        width: calc(1024px - 4.5rem);
+        padding: 0 2rem 2rem 2rem;
+
+        h2 {
+          font-family: $font-tertiary;
+          color: #005271;
+
+          &:after {
+            content: "";
+            width: 100px;
+            height: 1px;
+            background-color: rgb(196, 196, 201);
+            display: block;
+            position: relative;
+            top: 0.5rem;
+          }
+        }
+      }
+
+      &-items {
+        padding-top: 0.5rem;
+
+        &.is-active a {
+          color: $secondary;
+          font-weight: $font-bold;
+        }
+
+        a {
+          font-size: 0.875rem;
+          font-family: $font-tertiary;
+          color: #39393b;
+        }
+      }
+    }
+  }
+
+  header + * {
+    margin-top: 116px;
+  }
 }

@@ -52,7 +52,7 @@ new Swiper("#selection-carousel", {
 const dropdowns = document.querySelectorAll(".dropdown-button");
 
 dropdowns.forEach((dropdownButton) => {
-  const items = dropdownButton.parentNode.querySelector("ul");
+  const items = dropdownButton.parentNode.querySelector(".dropdown-menu");
 
   dropdownButton.addEventListener("click", function (event) {
     event.preventDefault();
@@ -94,4 +94,17 @@ menu.forEach((menu) => {
       menuMobile.classList.add("is-active");
     }
   });
+});
+
+window.addEventListener("scroll", function () {
+  const scrollCurrent = this.scrollY;
+  const subNavbar = this.document.querySelector(".subnavbar");
+
+  if (scrollCurrent > 50) {
+    // hide navbar
+    subNavbar.classList.add("fadeOutUp");
+  } else {
+    subNavbar.classList.add("fadeInDown");
+    subNavbar.classList.remove("fadeOutUp");
+  }
 });
