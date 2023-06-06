@@ -16,7 +16,7 @@
 <img src="https://github.com/diegoadrianomendes/nerdweb/blob/main/build/assets/img/screen-safari.png?raw=true">
 
 <p align="center">
-    <a href="https://nerdweb-landing-page.netlify.app/" target="_blank">
+    <a href="https://nerdweb.diegomendesdev.com.br/" target="_blank">
         <img src="https://github.com/diegoadrianomendes/nerdweb/blob/main/build/assets/img/button-demo.png?raw=true">
     </a>
     <br><br>
@@ -85,4 +85,4 @@ This project is under the MIT license. See the [LICENSE](https://github.com/Dieg
 
 ---
 
-Made with ♥ by Diego Mendes :wave: [Get in touch!](https://www.linkedin.com/in/diegomendes-dev/)
+Made with ♥ by Diego Mendes :wave: [Get in touch!](https://diegomendesdev.com.br/en/portfolio/#contact)
